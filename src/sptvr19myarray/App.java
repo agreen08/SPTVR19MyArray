@@ -15,10 +15,9 @@ import java.util.Random;
  */
 class App {
     public void run() {
-        System.out.println("-----Массивы-----");
+        System.out.println("Массив целых чётных чисел:");
         Random random = new Random();
-        int rnum;
-        rnum = 0;
+        int rnum = 0;
         int min = 100;
         int max = 0;
         int sum = 0;
@@ -39,7 +38,7 @@ class App {
          
         }
         System.out.println();
-        System.out.println("Среднее арифметическое без учёта минимального(+min+) и максимального(+max+)");
+        System.out.println("Среднее арифметическое без учёта минимального(+min+) и максимального(+max+) числа: (+sum+) ");
         System.out.println((double)(sum-min-max)/(numbers.length - 2));
     }
 }
