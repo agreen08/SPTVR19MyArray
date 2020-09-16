@@ -5,12 +5,43 @@
  */
 package sptvr19myarray;
 
+import static java.lang.Double.sum;
+import static java.lang.Math.random;
+import java.util.Random;
+
 /**
  *
  * @author user
  */
 class App {
     public void run() {
-        System.out.println("---MyArrays---");
+        System.out.println("-----Массивы-----");
+        Random random = new Random();
+        int rnum;
+        rnum = 0;
+        int min = 100;
+        int max = 0;
+        int sum = 0;
+        //Создаём массив чётных целых чисел.
+        int [] numbers = new int [20];
+        for (int i = 0; i < numbers.length; i++) {
+            while (true) {
+                rnum = random.nextInt(99-0+1)+0;
+                if (rnum %2 == 0) {
+                    numbers[i] = rnum;
+                    break;
+                }
+            }
+            if (numbers[i] < max)max = numbers[i];
+            if (numbers[i] > min)min = numbers[i];
+            sum += numbers[i];
+            System.out.printf("%4d", numbers[i]);
+         
+        }
+        System.out.println();
+        System.out.println("Среднее арифметическое без учёта минимального(+min+) и максимального(+max+)");
+        System.out.println((double)(sum-min-max)/(numbers.length - 2));
     }
 }
+        
+
